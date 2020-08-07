@@ -1,0 +1,51 @@
+spring:
+  application:
+    name: jiaohang-web
+  cloud:
+    nacos:
+      config:
+        server-addr: 39.100.239.152:8849
+        file-extension: yaml
+        namespace: f657128b-37b3-4e75-84ce-529464349e6e
+        group: DEFAULT_GROUP
+        ext-config:
+          -
+            refresh: true
+            data-id: wechat-config.yaml
+            group: xcd-common
+          -
+            refresh: true
+            data-id: spring-datasource.yaml
+            group: xcd-common
+
+server:
+  servlet:
+    context-path: /newjiao/web
+mybatis‐plus:
+  mapper‐locations: classpath:mapper/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    #机器 ID 部分(影响雪花ID)
+    workerId: 1
+    #数据标识 ID 部分(影响雪花ID)(workerId 和 datacenterId 一起配置才能重新初始化 Sequence)
+    datacenterId: 18
+
+
+xxl:
+  job:
+    executor:
+      logpath: /data/applogs/xxl-job/jiaotong-web/jobhandler
+      appname: xxl-job-executor-jiaotong-web
+      port: 1239
+      ip: 39.100.239.152
+      logretentiondays: 15
+    admin:
+      addresses: http://39.100.239.152:8090/xxl-job-admin
+    accessToken:
+
+
+
+
+
+

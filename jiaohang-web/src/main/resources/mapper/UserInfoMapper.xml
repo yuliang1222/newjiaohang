@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jiaotong.jiaohangweb.mapper.UserInfoMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.jiaotong.common.entity.UserInfo">
+        <id column="Id" property="id" />
+        <result column="Wx_Open_Id" property="wxOpenId" />
+        <result column="Phone_No" property="phoneNo" />
+        <result column="Create_Time" property="createTime" />
+        <result column="Experienced" property="experienced" />
+        <result column="Planner_Type" property="plannerType" />
+        <result column="Session_Key" property="sessionKey" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, Wx_Open_Id, Phone_No, Create_Time, Experienced, Planner_Type, Session_Key
+    </sql>
+
+</mapper>

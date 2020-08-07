@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jiaotong.jiaohangweb.mapper.OrderInfoMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.jiaotong.common.entity.OrderInfo">
+        <id column="Id" property="id" />
+        <result column="User_Id" property="userId" />
+        <result column="Card_Id" property="cardId" />
+        <result column="Card_Name" property="cardName" />
+        <result column="Planner_Id" property="plannerId" />
+        <result column="Start_Time" property="startTime" />
+        <result column="End_Time" property="endTime" />
+        <result column="STATUS" property="status" />
+        <result column="Total_Duration" property="totalDuration" />
+        <result column="Total_Count" property="totalCount" />
+        <result column="Used_Duration" property="usedDuration" />
+        <result column="Used_Count" property="usedCount" />
+        <result column="Create_Time" property="createTime" />
+        <result column="Contract_Type" property="contractType" />
+        <result column="Pay_Amout" property="payAmout" />
+        <result column="Prepay_Id" property="prepayId" />
+        <result column="Pay_Time" property="payTime" />
+        <result column="Order_No" property="orderNo" />
+        <result column="Card_Type" property="cardType" />
+        <result column="Service_Id" property="serviceId" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, User_Id, Card_Id, Card_Name, Planner_Id, Start_Time, End_Time, STATUS, Total_Duration, Total_Count, Used_Duration, Used_Count, Create_Time, Contract_Type, Pay_Amout, Prepay_Id, Pay_Time, Order_No, Card_Type, Service_Id
+    </sql>
+
+</mapper>
